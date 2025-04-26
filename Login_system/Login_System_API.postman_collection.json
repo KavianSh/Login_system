@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "Login System API",
+    "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+    "description": "Collection for testing the Login/Register API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register OTP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/register/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "register", ""]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phone_number\": \"09123456789\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Verify OTP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/verify-otp/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "verify-otp", ""]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phone_number\": \"09123456789\",\n    \"code\": \"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Complete Profile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/complete-profile/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "complete-profile", ""]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phone_number\": \"09123456789\",\n    \"full_name\": \"Ali Reza\",\n    \"email\": \"ali@example.com\",\n    \"password\": \"strong_password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/login/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "login", ""]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phone_number\": \"09123456789\",\n    \"password\": \"strong_password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
